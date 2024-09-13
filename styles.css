@@ -16,6 +16,7 @@
 }
 body{
     font-size: 15px;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
@@ -28,7 +29,9 @@ img{
     height: 100%;
     object-fit: cover;
 }
-
+section{
+    min-height: 100vh;
+}
 
 /* Header section */
 
@@ -36,7 +39,6 @@ img{
     background: url(./images/desktop/image-hero.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -107,3 +109,108 @@ nav{
 
 
 /* Hero section */
+.leader_container{
+    max-width: 88%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+    padding: 4rem 0;
+}
+.leader_content{
+    position: absolute;
+    background: var(--white);
+    right: 0;
+    bottom: 0%;
+    width: 48%;
+    padding: 2rem 4rem;
+    height: 50%;
+    font-family: var(--fontAlata);
+}
+.leader_text h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+.leader_text p{
+    color: var(--darkGray);
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+
+/* Creations */
+.creations_container{
+    max-width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.title_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.title_div h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--fontAlata);
+    letter-spacing: 0.2rem;
+}
+.see-all-btn{
+    background: var(--white);
+    color: var(--black);
+    padding: 0.4rem 1.4rem;
+    font-family: var(--fontAlata);
+    font-weight: var(--alataWeight);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid var(--black);
+    transition: background 0.3s;
+    letter-spacing: 0.1rem;
+}
+.see-all-btn:hover{
+    background: var(--black);
+    color: var(--white);
+}
+.creation_grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 4rem 0;
+}
+.grid_item{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.grid_item_overlay{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.grid_item_text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: var(--white);
+    font-family: var(--fontJosefinSans);
+    font-weight: var(--fontJosefinSans);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
