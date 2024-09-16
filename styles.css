@@ -54,7 +54,7 @@ header{
     padding: 2rem 0;
 }
 .logo{
-    width: 14rem;
+    height: 2rem;
 }
 
 nav{
@@ -90,10 +90,9 @@ nav ul li a:hover::after{
     padding: 0.8rem 1rem;
     color: var(--white);
     font-family: var(--fontJosefinSans);
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
-    width: fit-content;
 }
 
 /* Leader Section */
@@ -259,10 +258,57 @@ nav ul li a:hover::after{
 .footer_social_copyright p{
     color: var(--darkGray);
 }
+/* Mobile Menu Styles */
+.mobile_menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--black);
+  z-index: 100;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.mobile_menu .logo_close_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.mobile_menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mobile_menu ul li a {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-family: var(--fontJosefinSans);
+  text-transform: uppercase;
+}
+
+.close_icon {
+  height: 1rem;
+  cursor: pointer;
+}
+
+
 @media screen and (min-width: 768px){
     .header_section{
         background-image: url(./images/desktop/image-hero.jpg);
         height: 60vh;
+    }
+    .header_title{
+        font-size: 3.5rem;
+        width: fit-content;
     }
     .menu_icon{
         display: none;
@@ -318,4 +364,7 @@ nav ul li a:hover::after{
     .footer_social_copyright ul{
         flex-direction: row;
     }
+    .mobile_menu {
+    display: none; /* Hide the mobile menu on larger screens */
+  }
 }
