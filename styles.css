@@ -201,17 +201,64 @@ nav ul li a:hover::after{
     padding: 2rem 0;
     text-align: center;
 }
-.footer .container{
+.footer_nav{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
-}
-.footer_social{
-    display: flex;
+    justify-content: space-between;
     gap: 1rem;
+    padding: 0.4rem 0;
+    align-items: center;
 }
 
+.footer_nav ul{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.footer_nav ul li::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s;
+    position: relative;
+    top: 0.4rem;
+}
+.footer_nav ul li:hover::after{
+    width: 100%;
+}
+.footer_social_copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem ;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer_social_copyright ul{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: var(--fontJosefinSans);
+    flex-direction: column;
+}
+.footer_social_copyright ul li::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s;
+    position: relative;
+    top: 0.4rem;
+}
+.footer_social_copyright ul li:hover::after{
+    width: 100%;
+}
+.footer_social_copyright p{
+    color: var(--darkGray);
+}
 @media screen and (min-width: 768px){
     .header_section{
         background-image: url(./images/desktop/image-hero.jpg);
@@ -261,5 +308,14 @@ nav ul li a:hover::after{
     }
     .grid_item{
         height: 360px;
+    }
+    .footer_nav{
+        flex-direction: row;
+    }
+    .footer_social_copyright{
+        flex-direction: row;
+    }
+    .footer_social_copyright ul{
+        flex-direction: row;
     }
 }
