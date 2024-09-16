@@ -355,6 +355,11 @@ nav ul li a:hover::after{
     .grid_item{
         height: 360px;
     }
+    .grid_item_text:hover{
+        background: var(--white);
+        opacity: 0.7;
+        color: var(--black);
+    }
     .footer_nav{
         flex-direction: row;
     }
